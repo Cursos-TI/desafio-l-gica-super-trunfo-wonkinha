@@ -19,7 +19,7 @@ printf("Digite o nome da cidade: \n");
 scanf(" %s",cidade1);
 printf("Informe a população dessa cidade: \n");
 scanf(" %lu",&populacao1);
-/*printf("Informe a área dessa cidade em km²: \n");
+printf("Informe a área dessa cidade em km²: \n");
 scanf(" %f" ,&area1);
 printf("Informe o PIB dessa cidade: \n");
 scanf(" %f",&pib1);
@@ -30,7 +30,7 @@ scanf("%d", &pontos1);
 densidade1 = (float) (populacao1 / area1);
 pibper1 = (float) (pib1 / populacao1);
 
-printf("Estado: %s\n",estado1);
+/*printf("Estado: %s\n",estado1);
 printf("Código: %s\n",codigo1);
 printf("Cidade: %s\n",cidade1);
 printf("População: %d\n",populacao1);
@@ -49,7 +49,7 @@ printf("Digite o nome da cidade: \n");
 scanf(" %s",cidade2);
 printf("Informe a população dessa cidade: \n");
 scanf(" %lu",&populacao2);
-/*printf("Informe a área dessa cidade em km²: \n");
+printf("Informe a área dessa cidade em km²: \n");
 scanf(" %f" ,&area2);
 printf("Informe o PIB dessa cidade: \n");
 scanf(" %f",&pib2);
@@ -71,16 +71,101 @@ printf("PIB: %.2f\n",pib2);
 printf("Densidade populacional: %.2f\n",densidade2);
 printf("PIB per cápita: %.2f\n",pibper2);*/
 
+printf("COMPARATIVO DE POPULAÇÃO.\n");
 if (populacao1 > populacao2)
 {
 printf("Carta 1 - %s(%s): %u\n", cidade1, estado1, populacao1);
 printf("Carta 2 - %s(%s): %u\n", cidade2, estado2, populacao2);
-printf("Carta 1 (%s) venceu!", cidade1);
+printf("População: Carta 1 (%s) venceu!\n", cidade1);
 
 } else{
     printf("Carta 1 - %s(%s): %u\n", cidade1, estado1, populacao1);
 printf("Carta 2 - %s(%s): %u\n", cidade2, estado2, populacao2);
-printf("Carta 2 (%s) venceu!", cidade2);
+printf("População: Carta 2 (%s) venceu!\n", cidade2);
+}
+
+printf("COMPARATIVO DE ÁREA.\n");
+
+if (area1 > area2)
+{
+printf("Carta 1 - %s(%s): %.1f\n", cidade1, estado1, area1);
+printf("Carta 2 - %s(%s): %.1f\n", cidade2, estado2, area2);
+printf("Área: Carta 1 (%s) venceu!\n", cidade1);
+
+} else{
+    printf("Carta 1 - %s(%s): %.1f\n", cidade1, estado1, area1);
+printf("Carta 2 - %s(%s): %.1f\n", cidade2, estado2, area2);
+printf("Área: Carta 2 (%s) venceu!\n", cidade2);
+}
+
+printf("COMPARATIVO DE PIB.\n");
+
+if (pib1 > pib2)
+{
+printf("Carta 1 - %s(%s): %.2f\n", cidade1, estado1, pib1);
+printf("Carta 2 - %s(%s): %.2f\n", cidade2, estado2, pib2);
+printf("PIB: Carta 1 (%s) venceu!\n", cidade1);
+
+} else{
+    printf("Carta 1 - %s(%s): %.2f\n", cidade1, estado1, pib1);
+printf("Carta 2 - %s(%s): %.2f\n", cidade2, estado2, pib2);
+printf("PIB: Carta 2 (%s) venceu!\n", cidade2);
+}
+
+printf("COMPARATIVO DE PONTOS TURÍSTICOS.\n");
+
+if (pontos1 > pontos2)
+{
+printf("Carta 1 - %s(%s): %d\n", cidade1, estado1, pontos1);
+printf("Carta 2 - %s(%s): %d\n", cidade2, estado2, pontos2);
+printf("Pontos turísticos: Carta 1 (%s) venceu!\n", cidade1);
+
+} else{
+    printf("Carta 1 - %s(%s): %d\n", cidade1, estado1, pontos1);
+printf("Carta 2 - %s(%s): %d\n", cidade2, estado2, pontos2);
+printf("Pontos turísitcos: Carta 2 (%s) venceu!\n", cidade2);
+}
+
+printf("COMPARATIVO DE DENSIDADE POPULACIONAL (O COM MENOS VENCE).\n");
+
+if (densidade1 < densidade2)
+{
+printf("Carta 1 - %s(%s): %.2f\n", cidade1, estado1, densidade1);
+printf("Carta 2 - %s(%s): %.2f\n", cidade2, estado2, densidade2);
+printf("Densidade Populacional: Carta 1 (%s) venceu!\n", cidade1);
+
+} else{
+printf("Carta 1 - %s(%s): %.2f\n", cidade1, estado1, densidade1);
+printf("Carta 2 - %s(%s): %.2f\n", cidade2, estado2, densidade2);
+printf("Densidade Populacional: Carta 2 (%s) venceu!\n", cidade2);
+}
+
+printf("COMPARATIVO DE PIB PER CÁPITA.\n");
+
+if (pibper1 > pibper2)
+{
+printf("Carta 1 - %s(%s): %.2f\n", cidade1, estado1, pibper1);
+printf("Carta 2 - %s(%s): %.2f\n", cidade2, estado2, pibper1);
+printf("PIB Per Cápita: Carta 1 (%s) venceu!\n", cidade1);
+
+} else{
+printf("Carta 1 - %s(%s): %.2f\n", cidade1, estado1, pibper1);
+printf("Carta 2 - %s(%s): %.2f\n", cidade2, estado2, pibper2);
+printf("PIB Per Cápita: Carta 2 (%s) venceu!\n", cidade2);
+}
+
+printf("COMPARATIVO DE SUPERPODER.\n");
+
+if ( superpoder1 > superpoder2)
+{
+printf("Carta 1 - %s(%s): %.2f\n", cidade1, estado1, superpoder1);
+printf("Carta 2 - %s(%s): %.2f\n", cidade2, estado2, superpoder2);
+printf("Superpoder: Carta 1 (%s) venceu!\n", cidade1);
+
+} else{
+printf("Carta 1 - %s(%s): %.2f\n", cidade1, estado1, superpoder1);
+printf("Carta 2 - %s(%s): %.2f\n", cidade2, estado2, superpoder2);
+printf("Superpoder: Carta 2 (%s) venceu!\n", cidade2);
 }
 
 return 0;
